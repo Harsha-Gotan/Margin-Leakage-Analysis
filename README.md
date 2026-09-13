@@ -1,6 +1,7 @@
 # 📊 Margin Leakage Analytics
 
-A SQL-driven analytics project for a fictional consulting/professional services firm, identifying and quantifying where billable profit is being lost — through underutilized staff capacity and project scope creep - and combining both into a single actionable metric: **Margin Leakage**.
+A SQL-driven analytics project for a fictional consulting/professional services firm, identifying and quantifying where billable profit is being lost - through underutilized staff capacity and project scope creep - and combining both into a single actionable metric: **Margin Leakage**.
+
 
 ## Business Problem
 
@@ -11,6 +12,7 @@ Professional services firms bill by the hour, which means profitability depends 
 
 The **Margin Leakage** metric combines both into one number a firm's leadership can act on.
 
+
 ## 🔑 Key Findings
 
 - **Firm-wide utilization: 34.1%** - well below the industry-healthy benchmark of 65-75%
@@ -19,11 +21,13 @@ The **Margin Leakage** metric combines both into one number a firm's leadership 
 - **Total Margin Leakage: $2.34M**
 - 5 of 20 employees (25%) had zero billable engagement over the period
 
+
 ## 🛠️ Tech Stack
 
 - **PostgreSQL** - data cleaning, transformation, and analysis (CTEs, window functions, views)
 - **Power BI** - 3-page interactive dashboard with DAX measures
 - **Python (pandas, Faker)** - synthetic dataset generation only (not part of the analysis itself)
+
 
 ## Methodology
 
@@ -42,6 +46,7 @@ For each project: actual vs. budgeted hours and cost, gross margin %, and a simp
 ### 4. Margin Leakage Synthesis
 Bench cost leakage (from utilization) + scope creep cost overage (from profitability) = Total Margin Leakage.
 
+
 ## 📈 Dashboard Walkthrough
 
 ### Page 1 — Utilization Overview
@@ -56,6 +61,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 | **Bench Cost by Employee (bar chart)** | Placed next to the utilization chart on purpose: the two rankings *don't* match, because a benched senior consultant costs more than a benched analyst at the same utilization %. The contrast is the insight. |
 | **Utilization by Practice Area (donut)** | Answers "is one practice line systematically more overstaffed than others?" - a donut suits a small number of categories (5 practice areas) better than a bar chart would. |
 
+
 ### Page 2 — Project Profitability
 
 <img width="1375" height="772" alt="image" src="https://github.com/user-attachments/assets/e5312b10-49c9-4f9a-980e-bad9fcbe82d4" />
@@ -68,6 +74,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 | **Margin by Project (color-coded bar chart)** | Color (green/red) does the flagging instantly, so a viewer doesn't have to read every margin % to spot which projects need attention. |
 | **Scope Creep vs. Margin (scatter plot)** | The one chart that visually *proves* the project's core thesis — as hours-over-budget increases, margin trends downward. A scatter is the right choice here because it shows the relationship between two numbers, not just a ranking. |
 
+
 ### Page 3 — Margin Leakage Summary
 
 <img width="1377" height="772" alt="image" src="https://github.com/user-attachments/assets/5f5a2597-b9f2-442f-ae79-11a19feabdc9" />
@@ -76,6 +83,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 | Visual | What it shows & why |
 |---|---|
 | **Waterfall chart** | The headline visual of the whole project. A waterfall is the only chart type that shows *both* the starting revenue *and* exactly how much each leakage source subtracts from it, step by step, ending at what's actually realized — a single bar or KPI card couldn't tell that story. |
+
 
 ## 💡 Insights & Recommendations
 
@@ -91,6 +99,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 **Insight:** Only 1 of 18 projects breached the 20%-over-budget scope-creep threshold, but that single project accounts for the entire $30K overage.
 **➡️ Recommendation:** Scope creep isn't a firm-wide process problem in this data - it's isolated. A targeted post-mortem on that one project (PRJ018) would likely explain the overage better than a firm-wide policy change.
 
+
 ## Key SQL / DAX Concepts Demonstrated
 
 - CTEs and window functions (`ROW_NUMBER()`, `AVG() OVER()`)
@@ -98,22 +107,15 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 - Views for reusable, modular analysis layers
 - DAX: `SUMX`, `DIVIDE`, `CALCULATE`, context transition, custom number formatting
 
+
 ## Assumptions & Limitations
 
 - `budgeted_cost` represents the client-billed contract value; actual delivery cost is calculated as logged hours × employee bill rate (a simplification — real firms often track a separate internal cost rate)
 - Utilization is measured over a fixed 6-month reporting period, while project profitability is measured over each project's full lifetime - these are intentionally different time frames, consistent with how PS firms typically report each
 - Scope-creep flagging uses a fixed >20% over-budget threshold rather than a statistical model, prioritizing interpretability
 
-## Repository Structure
 
-```
-01_schema.sql                     -- staging + clean schema DDL
-02_load_staging.sql               -- raw CSV load
-03_clean_employees.sql            -- employee dedup & normalization
-04_clean_projects.sql             -- project cleaning & anomaly flagging
-05_clean_timesheets.sql           -- timesheet dedup & hour validation
-06_utilization_view.sql           -- utilization & bench cost view
-07_profitability.sql              -- project profitability view
+
 08_margin_leakage.sql             -- Margin Leakage synthesis query
 09_margin_leakage_waterfall.sql   -- waterfall chart data view
 employees_raw.csv / projects_raw.csv / timesheets_raw.csv   -- source data
