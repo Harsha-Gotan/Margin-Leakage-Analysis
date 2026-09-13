@@ -1,0 +1,19 @@
+project_id,client_name,practice_area,start_date,planned_end_date,actual_end_date,budgeted_hours,budgeted_cost,status
+PRJ001,mack-peterson,HR Consulting,2026-04-06,2026-08-31,2026-09-05,1200,176785.93,Completed
+PRJ002,Graham-Chavez,Operations,2025-12-03,2026-02-01,2026-03-03,361,69056.31,Completed
+PRJ003,"Liu, Baker and Mason",Strategy,2026-05-01,2026-09-05,2026-09-05,462,94089.94,Completed
+PRJ004,Romero Inc,Technology,2025-12-14,2026-02-15,2026-03-17,1066,166050.04,Completed
+PRJ005,"Evans, Fowler and Lynch",Technology,2025-12-16,2026-04-16,2025-12-06,1530,293614.74,Completed
+PRJ006, Brooks and Sons ,HR Consulting,2025-12-08,2026-03-05,2026-03-05,331,87003.04,Completed
+PRJ007,"Ashley, Nielsen and Sellers",Technology,2026-02-10,2026-05-26,2026-05-26,1649,310060.11,Completed
+PRJ008,"Nguyen, Smith and Hickman",Strategy,2026-03-21,2026-08-08,2026-09-07,687,122671.64,Completed
+PRJ009,Allen-Allen,Technology,2026-01-30,2026-05-09,2026-06-08,1380,278519.0,Completed
+PRJ010,"Arroyo, Miller and Tucker",Financial Advisory,2026-03-15,2026-07-26,2026-07-26,398,51554.53,Completed
+PRJ011, Spence PLC ,Financial Advisory,2026-03-26,2026-06-23,,310,38840.51,In Progress
+PRJ012,Anderson Group,Operations,2026-05-05,2026-09-14,,709,109928.02,In Progress
+PRJ013,"Martin, Rose and Obrien",Financial Advisory,2026-06-07,2026-07-24,2026-07-29,1147,251596.42,Completed
+PRJ014, Hickman Ltd ,Strategy,2026-04-03,2026-06-28,,1327,240274.51,In Progress
+PRJ015,"Harris, Collins and Carney",Strategy,2026-01-22,2026-03-04,2026-04-08,540,96571.79,Delayed
+PRJ016,"brooks, lam and hayes",Technology,2026-03-12,2026-07-30,2026-07-30,537,99213.39,Completed
+PRJ017,Walker LLC,Operations,2026-02-26,2026-07-24,,1131,183702.37,In Progress
+PRJ018,Chapman and Sons,HR Consulting,2025-12-22,2026-04-15,,517,90327.18,In Progress

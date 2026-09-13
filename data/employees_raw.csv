@@ -1,0 +1,23 @@
+employee_id,employee_name,seniority_level,practice_area,standard_bill_rate,hire_date
+EMP001,Donald Walker,Senior Consultant,Operations,165,2024-05-05
+EMP002,Stephanie Miller,Analyst,Strategy,$97.00,2024-11-25
+EMP003,Daniel Wagner,Analyst,hr consulting,96,2023-02-04
+EMP004,Matthew Gardner,Senior Consultant,Technology,178,2020-10-26
+EMP005,Rhonda Smith,Manager,Financial Advisory,225,2021-12-07
+EMP007,Brandon Davis,Consultant,Strategy,128,2026-03-04
+EMP011,Darren Roberts,Consultant,Operations,134,2024-09-19
+EMP012,Brian Ramirez,Senior Consultant,Strategy,185,2021-02-15
+EMP013,Jacob Clark,Senior Consultant,Financial Advisory,170,2024-04-27
+EMP014,Maria Lynch,Senior Consultant,Technology,182,2022-03-15
+EMP015,Carla Gray,Senior Consultant,Strategy,172,2021-08-26
+EMP016,Kristin Cohen,Analyst,Operations,98,2026-05-10
+EMP017,Crystal Johnson,Manager,financial advisory,240,2025-07-06
+EMP018,Daniel Hahn,Consultant,HR Consulting,128,2022-06-25
+EMP019,Matthew Foster,Consultant,HR Consulting,124,2025-09-15
+EMP020,Derek Wright,Manager,Technology,224,2025-12-04
+EMP021,Kevin Hurst,Analyst,HR Consulting,92,2023-11-23
+EMP022,Zachary Hicks,Partner,Strategy,310,2022-12-18
+EMP024,Arthur James,Analyst,HR Consulting,88,2025-03-22
+EMP026,Melanie Herrera,Analyst,Technology,91,2020-09-25
+EMP019,Matthew Foster,Consultant,HR Consulting,124,2025-09-15
+EMP003,Daniel Wagner,Analyst,hr consulting,96,2023-02-04
