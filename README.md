@@ -13,13 +13,16 @@ Professional services firms bill by the hour, which means profitability depends 
 The **Margin Leakage** metric combines both into one number a firm's leadership can act on.
 
 
-## 🔑 Key Findings
+## 🗂️ Data Source
 
-- **Firm-wide utilization: 34.1%** - well below the industry-healthy benchmark of 65-75%
-- **$2.31M in bench cost leakage** - the value of unbilled staff capacity over a 6-month reporting window
-- **$29.7K in scope creep leakage** - cost overage from 1 of 18 projects running significantly over its budgeted hours
-- **Total Margin Leakage: $2.34M**
-- 5 of 20 employees (25%) had zero billable engagement over the period
+This project uses a **synthetic dataset** generated specifically for this analysis — no real company or client data is used. Three tables were created to simulate a consulting/professional services firm:
+
+- **Employees** (20 staff records) - seniority level, practice area, standard bill rate
+- **Projects** (18 fixed-fee client engagements) - budgeted hours/cost, timeline, status
+- **Timesheets** (~2,800 entries) - daily logged hours per employee per project, spanning a 6-month reporting window
+
+The data was intentionally generated with realistic messiness (duplicate rows, inconsistent text formatting, invalid values, a logical date inconsistency) to demonstrate a genuine data-cleaning workflow, and with a controlled budget-variance distribution across projects so the profitability analysis reflects a believable mix of on-budget, under-budget, and over-budget outcomes rather than random noise.
+
 
 
 ## 🛠️ Tech Stack
@@ -27,6 +30,7 @@ The **Margin Leakage** metric combines both into one number a firm's leadership 
 - **PostgreSQL** - data cleaning, transformation, and analysis (CTEs, window functions, views)
 - **Power BI** - 3-page interactive dashboard with DAX measures
 - **Python (pandas, Faker)** - synthetic dataset generation only (not part of the analysis itself)
+
 
 
 ## Methodology
@@ -45,6 +49,7 @@ For each project: actual vs. budgeted hours and cost, gross margin %, and a simp
 
 ### 4. Margin Leakage Synthesis
 Bench cost leakage (from utilization) + scope creep cost overage (from profitability) = Total Margin Leakage.
+
 
 
 ## 📈 Dashboard Walkthrough
@@ -85,6 +90,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 | **Waterfall chart** | The headline visual of the whole project. A waterfall is the only chart type that shows *both* the starting revenue *and* exactly how much each leakage source subtracts from it, step by step, ending at what's actually realized — a single bar or KPI card couldn't tell that story. |
 
 
+
 ## 💡 Insights & Recommendations
 
 **Insight:** Firm-wide utilization sits at 34.1%, roughly half of the 65-75% healthy industry benchmark, with 5 of 20 employees (25%) logging zero billable work over the period.
@@ -100,12 +106,14 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 **➡️ Recommendation:** Scope creep isn't a firm-wide process problem in this data - it's isolated. A targeted post-mortem on that one project (PRJ018) would likely explain the overage better than a firm-wide policy change.
 
 
+
 ## Key SQL / DAX Concepts Demonstrated
 
 - CTEs and window functions (`ROW_NUMBER()`, `AVG() OVER()`)
 - `CROSS JOIN` / `LEFT JOIN` for complete data grids (avoiding silent data loss)
 - Views for reusable, modular analysis layers
 - DAX: `SUMX`, `DIVIDE`, `CALCULATE`, context transition, custom number formatting
+
 
 
 ## Assumptions & Limitations
