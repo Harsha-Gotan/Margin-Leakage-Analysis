@@ -105,7 +105,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 **Insight:** Only 1 of 18 projects breached the 20%-over-budget scope-creep threshold, but that single project accounts for the entire $30K overage.
 **➡️ Recommendation:** Scope creep isn't a firm-wide process problem in this data - it's isolated. A targeted post-mortem on that one project (PRJ018) would likely explain the overage better than a firm-wide policy change.
 
-
+<br>
 
 ## Key SQL / DAX Concepts Demonstrated
 
@@ -114,7 +114,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 - Views for reusable, modular analysis layers
 - DAX: `SUMX`, `DIVIDE`, `CALCULATE`, context transition, custom number formatting
 
-
+<br>
 
 ## Assumptions & Limitations
 
@@ -122,8 +122,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 - Utilization is measured over a fixed 6-month reporting period, while project profitability is measured over each project's full lifetime - these are intentionally different time frames, consistent with how PS firms typically report each
 - Scope-creep flagging uses a fixed >20% over-budget threshold rather than a statistical model, prioritizing interpretability
 
-
-
+<br>
 08_margin_leakage.sql             -- Margin Leakage synthesis query
 09_margin_leakage_waterfall.sql   -- waterfall chart data view
 employees_raw.csv / projects_raw.csv / timesheets_raw.csv   -- source data
