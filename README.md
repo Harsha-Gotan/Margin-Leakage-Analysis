@@ -1,7 +1,7 @@
 # 📊 Margin Leakage Analytics
 
 A SQL-driven analytics project for a fictional consulting/professional services firm, identifying and quantifying where billable profit is being lost - through underutilized staff capacity and project scope creep - and combining both into a single actionable metric: **Margin Leakage**.
-
+<br>
 
 ## Business Problem
 
@@ -11,7 +11,7 @@ Professional services firms bill by the hour, which means profitability depends 
 2. **How much profit are we losing to projects that ran over their budgeted hours?**
 
 The **Margin Leakage** metric combines both into one number a firm's leadership can act on.
-
+<br>
 
 ## 🗂️ Data Source
 
@@ -23,7 +23,7 @@ This project uses a **synthetic dataset** generated specifically for this analys
 
 The data was intentionally generated with realistic messiness (duplicate rows, inconsistent text formatting, invalid values, a logical date inconsistency) to demonstrate a genuine data-cleaning workflow, and with a controlled budget-variance distribution across projects so the profitability analysis reflects a believable mix of on-budget, under-budget, and over-budget outcomes rather than random noise.
 
-
+<br>
 
 ## 🛠️ Tech Stack
 
@@ -31,7 +31,7 @@ The data was intentionally generated with realistic messiness (duplicate rows, i
 - **Power BI** - 3-page interactive dashboard with DAX measures
 - **Python (pandas, Faker)** - synthetic dataset generation only (not part of the analysis itself)
 
-
+<br>
 
 ## Methodology
 
@@ -50,7 +50,7 @@ For each project: actual vs. budgeted hours and cost, gross margin %, and a simp
 ### 4. Margin Leakage Synthesis
 Bench cost leakage (from utilization) + scope creep cost overage (from profitability) = Total Margin Leakage.
 
-
+<br>
 
 ## 📈 Dashboard Walkthrough
 
@@ -89,7 +89,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 |---|---|
 | **Waterfall chart** | The headline visual of the whole project. A waterfall is the only chart type that shows *both* the starting revenue *and* exactly how much each leakage source subtracts from it, step by step, ending at what's actually realized — a single bar or KPI card couldn't tell that story. |
 
-
+<br>
 
 ## 💡 Insights & Recommendations
 
