@@ -1,6 +1,7 @@
 # 📊 Margin Leakage Analytics
 
 A SQL-driven analytics project for a fictional consulting/professional services firm, identifying and quantifying where billable profit is being lost - through underutilized staff capacity and project scope creep - and combining both into a single actionable metric: **Margin Leakage**.
+
 <br>
 
 ## Business Problem
@@ -11,6 +12,7 @@ Professional services firms bill by the hour, which means profitability depends 
 2. **How much profit are we losing to projects that ran over their budgeted hours?**
 
 The **Margin Leakage** metric combines both into one number a firm's leadership can act on.
+
 <br>
 
 ## 🗂️ Data Source
@@ -122,9 +124,4 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 - Utilization is measured over a fixed 6-month reporting period, while project profitability is measured over each project's full lifetime - these are intentionally different time frames, consistent with how PS firms typically report each
 - Scope-creep flagging uses a fixed >20% over-budget threshold rather than a statistical model, prioritizing interpretability
 
-<br>
-08_margin_leakage.sql             -- Margin Leakage synthesis query
-09_margin_leakage_waterfall.sql   -- waterfall chart data view
-employees_raw.csv / projects_raw.csv / timesheets_raw.csv   -- source data
-```
 
