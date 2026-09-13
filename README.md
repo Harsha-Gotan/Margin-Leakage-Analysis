@@ -55,7 +55,7 @@ Bench cost leakage (from utilization) + scope creep cost overage (from profitabi
 
 | Visual | What it shows & why |
 |---|---|
-| **KPI cards** (Firm Utilization %, Bench Cost, Billable Hours, Headcount, Avg Utilization Rate %) | The top-line numbers a manager checks first. Two utilization metrics are shown side by side deliberately - one dollar-weighted, one a simple average — so the gap between them itself becomes a talking point. |
+| **KPI cards** (Firm Utilization %, Bench Cost, Billable Hours, Headcount, Avg Utilization Rate %) | The top-line numbers a manager checks first. Two utilization metrics are shown side by side deliberately - one dollar-weighted, one a simple average - so the gap between them itself becomes a talking point. |
 | **Firm Utilization % trend line** | A single line over time answers "is this getting better or worse?" faster than any table. A month-over-month view was chosen over a single point-in-time number specifically to catch a declining trend early. |
 | **Utilization by Employee (bar chart)** | Ranked bars make outliers - both top performers and fully-benched staff - visible in one glance, which a table of 20 rows wouldn't surface as quickly. |
 | **Bench Cost by Employee (bar chart)** | Placed next to the utilization chart on purpose: the two rankings *don't* match, because a benched senior consultant costs more than a benched analyst at the same utilization %. The contrast is the insight. |
